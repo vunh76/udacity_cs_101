@@ -52,7 +52,7 @@ def print_abacus_1(value):
 def print_abacus(value):
     n, templates = 1000000000, "00000*****   |00000****   *|00000***   **|00000**   ***|00000*   ****|00000   *****|0000   0*****|000   00*****|00   000*****|0   0000*****"
     while n >= 1:
-        c, value, n = value / n, value % n, n / 10
+        c, value, n = int(value / n), value % n, n / 10
         print ("|" + templates[c*14: c*14 + 13] + "|")
 
 ###  TEST CASES
