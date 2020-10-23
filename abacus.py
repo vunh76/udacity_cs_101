@@ -44,19 +44,19 @@ def print_abacus_1(value):
     while n >= 1:
         c, value, n = value / n, value % n, n / 10
         if c > 5:
-            print "|" + "0"*(10 - c) + "   " + "0"*(c-5) + "*"*5 + "|"
+            print ("|" + "0"*(10 - c) + "   " + "0"*(c-5) + "*"*5 + "|")
         else:
-            print "|" + "0"*5 + "*"*(5 - c) + "   " + "*"*c + "|"
+            print ("|" + "0"*5 + "*"*(5 - c) + "   " + "*"*c + "|")
 
 
 def print_abacus(value):
     n, templates = 1000000000, "00000*****   |00000****   *|00000***   **|00000**   ***|00000*   ****|00000   *****|0000   0*****|000   00*****|00   000*****|0   0000*****"
     while n >= 1:
         c, value, n = value / n, value % n, n / 10
-        print "|" + templates[c*14: c*14 + 13] + "|"
+        print ("|" + templates[c*14: c*14 + 13] + "|")
 
 ###  TEST CASES
-print "Abacus showing 0:"
+print ("Abacus showing 0:")
 print_abacus(0)
 #>>>|00000*****   |
 #>>>|00000*****   |
@@ -68,7 +68,7 @@ print_abacus(0)
 #>>>|00000*****   |
 #>>>|00000*****   |
 #>>>|00000*****   |
-print "Abacus showing 12345678:"
+print ("Abacus showing 12345678:")
 print_abacus(12345678)
 #>>>|00000*****   |
 #>>>|00000*****   |
@@ -80,7 +80,7 @@ print_abacus(12345678)
 #>>>|0000   0*****|
 #>>>|000   00*****|
 #>>>|00   000*****|
-print "Abacus showing 1337:"
+print ("Abacus showing 1337:")
 print_abacus(1337)
 #>>>|00000*****   |
 #>>>|00000*****   |
